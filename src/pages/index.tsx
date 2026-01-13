@@ -11,14 +11,16 @@ import AboutSection from '@/components/AboutSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import BookMeetingButton from '@/components/BookMeetingButton';
+// import Text from '@/components/text';
 
 const Index = () => {
    return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
          <Header />
          <main>
             <HeroSection />
             <StatsSection />
+            {/* <Text/> */}
             <ServicesSection />
             <PartnersSection />
             <TestimonialsSection />

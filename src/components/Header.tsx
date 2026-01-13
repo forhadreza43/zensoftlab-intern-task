@@ -322,8 +322,11 @@ const Header = () => {
    const handleDrawerChange = (open: boolean) => {
       setIsMenuOpen(open);
       if (open) {
+         // Prevent background scroll without shifting layout
+         document.documentElement.classList.add('drawer-open');
          setNavStack([{ title: 'Menu', items: mobileNavTree }]);
       } else {
+         document.documentElement.classList.remove('drawer-open');
          setNavStack([]);
       }
    };
@@ -339,7 +342,6 @@ const Header = () => {
    const goBack = () => {
       setNavStack((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
    };
-   console.log(navStack);
 
    return (
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md text-primary-foreground transition-all duration-300">
