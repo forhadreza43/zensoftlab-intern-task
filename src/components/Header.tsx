@@ -27,13 +27,11 @@ type MobileNavNode = {
    label: string;
    href?: string;
    icon?: React.ComponentType<{ className?: string }>;
-   pageUrl?: { name: string; url: string };
    children?: MobileNavNode[];
 };
 
 type MobileNavLevel = {
    title: string;
-   pageUrl?: { name: string; url: string };
    items: MobileNavNode[];
 };
 
@@ -291,7 +289,6 @@ const Header = () => {
             children: servicesDropdown.categories.map((category) => ({
                label: category.title,
                icon: category?.icon,
-               href: category.pageUrl?.url,
                children: category.items.map((item) => ({
                   label: item.name,
                   href: item.url,
@@ -304,7 +301,6 @@ const Header = () => {
             children: aboutUsDropdown.categories.map((category) => ({
                label: category.title,
                icon: category?.icon,
-               href: category.pageUrl?.url,
                children: category.items.map((item) => ({
                   label: item.name,
                   href: item.url,
