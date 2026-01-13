@@ -344,10 +344,10 @@ const Header = () => {
    };
 
    return (
-      <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md text-primary-foreground transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md text-primary-foreground transition-all duration-100">
          <div className="md:w-[95%] lg:w-[90%] max-w-360 mx-auto px-4">
             <div
-               className={`flex items-center justify-between h-15 transition-all duration-300 ${
+               className={`flex items-center justify-between h-15 transition-all duration-100 ${
                   isScrolled ? 'lg:h-15' : 'lg:h-20'
                }`}
             >
@@ -372,7 +372,7 @@ const Header = () => {
                      <span className="text-2xl font-bold">
                         <span className="text-cyan">Zen</span>
                         {/* <span className="text-primary-foreground">S</span> */}
-                        <span className="text-red-500">Soft</span>
+                        <span className="text-secondary">Soft</span>
                         <span className="text-primary-foreground">Lab</span>
                      </span>
                   </a>

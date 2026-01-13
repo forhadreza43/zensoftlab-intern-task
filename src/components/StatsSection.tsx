@@ -105,7 +105,7 @@ const StatsSection = () => {
    };
 
    return (
-      <section className="relative py-8 -mt-[15vh] md:-mt-[25vh] lg:-mt-[35vh] z-10">
+      <section className="relative py-8 -mt-[2vh] md:-mt-[20vh] lg:-mt-[32vh] z-10">
          <div className="md:w-[95%] lg:w-[90%] max-w-360 mx-auto px-4">
             <div
                ref={scrollRef}
