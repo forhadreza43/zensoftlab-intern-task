@@ -186,6 +186,10 @@ body {
    --shadow-lg: var(--shadow-lg);
    --shadow-xl: var(--shadow-xl);
    --shadow-2xl: var(--shadow-2xl);
+
+   --color-rocket-body: hsl(210 100% 60%);
+   --color-rocket-flame: hsl(30 100% 50%);
+   --color-rocket-flameInner: hsl(45 100% 60%);
 }
 /* 
 a {

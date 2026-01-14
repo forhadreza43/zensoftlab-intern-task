@@ -107,7 +107,7 @@ const ServicesSection = () => {
                   OUR SERVICES
                </h2>
 
-               <div className="hidden lg:flex gap-2 absolute right-4 top-6">
+               <div className="hidden lg:flex gap-2 absolute right-4 top-8">
                   <button
                      onClick={() =>
                         setStartIndex(
@@ -135,7 +135,6 @@ const ServicesSection = () => {
                </div>
             </div>
 
-            {/* ✅ Padding added here to protect card edges */}
             <div
                ref={scrollRef}
                className={`overflow-x-auto scrollbar-hidden px-2 py-2
