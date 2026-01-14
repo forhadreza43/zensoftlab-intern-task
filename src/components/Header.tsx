@@ -18,9 +18,11 @@ import {
    Building2,
    Spotlight,
    WindArrowDown,
+   CalendarDays,
 } from 'lucide-react';
 import NavDropdown from './NavDropdown';
 import { Drawer, DrawerClose, DrawerContent } from '@/components/ui/drawer';
+import { Link } from 'react-router';
 // import { Button } from '@/components/ui/button';
 
 type MobileNavNode = {
@@ -547,6 +549,14 @@ const Header = () => {
                   </div>
                </DrawerContent>
             </Drawer>
+         </div>
+         <div className="bg-[rgb(255,122,89)] flex items-center md:hidden justify-center py-1">
+            <Link
+               to="#"
+               className="flex items-center mx-auto text-xs underline"
+            >
+               <CalendarDays size={14} className="mr-2" /> Book a Meeting
+            </Link>
          </div>
       </header>
    );

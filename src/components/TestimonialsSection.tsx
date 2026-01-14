@@ -1,129 +1,75 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import React from 'react';
+import { HorizontalSlider } from './ui/horizontal-slider';
+import TestimonialsCard from './TestimonialsCard';
+import { Grip } from 'lucide-react';
 
-const testimonials = [
+export type Testimonial = {
+   id: number;
+   companyLogo: string;
+   title: string;
+   quote: string;
+   authorName: string;
+   authorRole: string;
+   authorAvatar: string;
+   star: number;
+}
+
+const testimonials: Testimonial[] = [
    {
-      company: 'Intelisale',
-      title: 'EXCEPTIONAL COMMUNICATION, EXPERTISE & ADAPTABILITY',
+      id: 1,
+      title: 'Exceptional Communication, Expertise & Adaptability',
       quote: "We're most impressed by their exceptional communication, in-depth business knowledge, and remarkable adaptability.",
-      name: 'Filip Mitrovic',
-      role: 'E-Commerce Product Manager',
-      color: 'cyan',
+      authorName: 'Filip Mitrovic',
+      authorRole: 'E-Commerce Product Manager',
+      companyLogo: 'cropped-Gotham.jpg',
+      authorAvatar: 'profile.jpg',
+      star: 5,
    },
    {
-      company: 'Mas Direct Network',
-      title: 'Communication was clear and consistent throughout the project',
+      id: 2,
+      title: 'Communication Was Clear and Consistent Throughout',
       quote: 'Brain Station 23 has successfully launched the subscription-based POS platform, improving operational efficiency, enhancing customer engagement, and providing accurate financial tracking.',
-      name: 'Chris Golden',
-      role: 'Director of Product Development',
-      color: 'primary',
+      authorName: 'Chris Golden',
+      authorRole: 'Director of Product Development',
+      companyLogo: 'cropped-Gotham.jpg',
+      authorAvatar: 'profile.jpg',
+      star: 3,
    },
    {
-      company: 'NCCO',
-      title: 'EXCEPTIONAL COMMUNICATION, EXPERTISE & ADAPTABILITY',
-      quote: "Brain Station 23's efforts have resulted in a modernized website that significantly improved user engagement and conversion rates. The team follows an agile methodology, ensuring transparency and timely feedback.",
-      name: 'Joe Perron',
-      role: 'Sr Software Engineering Manager',
-      color: 'yellow',
-   },
-   {
-      company: 'Shwapno',
-      title: 'Agile, Punctual, and Highly Responsive',
-      quote: 'They followed an agile approach, delivered milestones on time, and were highly responsive to our evolving needs.',
-      name: 'Syed Amirul Islam',
-      role: 'Head of Growth & E-Commerce Platform Dev',
-      color: 'pink',
+      id: 3,
+      title: 'Communication Was Clear and Consistent Throughout',
+      quote: 'Brain Station 23 has successfully launched the subscription-based POS platform, improving operational efficiency, enhancing customer engagement, and providing accurate financial tracking.',
+      authorName: 'Chris Golden',
+      authorRole: 'Director of Product Development',
+      companyLogo: 'cropped-Gotham.jpg',
+      authorAvatar: 'profile.jpg',
+      star: 4,
    },
 ];
 
-const TestimonialsSection = () => {
-   const [currentIndex, setCurrentIndex] = useState(0);
-
-   const nextSlide = () =>
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-   const prevSlide = () =>
-      setCurrentIndex(
-         (prev) => (prev - 1 + testimonials.length) % testimonials.length
-      );
-
+const TestimonialsSection: React.FC = () => {
    return (
-      <section className="py-20 relative overflow-hidden">
-         <div className="absolute inset-0 bg-card" />
+      <section className="relative w-full bg-white py-20 overflow-hidden">
+         {/* Blue background shape */}
+         <div className="absolute left-0 top-0 h-full w-[80%] md:w-[60%] lg:w-[45%] bg-sky-500 rounded-br-[80px]" />
 
-         <div className="relative z-10 container mx-auto px-4">
-            <h2 className="section-title text-center mb-4">
-               Client Success Stories
-            </h2>
-            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-               Hear valuable feedback and best wishes from the clients we have
-               had the privilege to work with.
-            </p>
-
-            <div className="max-w-4xl mx-auto">
-               <div className="relative">
-                  {/* Video placeholder / Testimonial Card */}
-                  <div className="glass-card rounded-2xl p-8 md:p-12">
-                     <Quote className="w-12 h-12 text-primary/40 mb-6" />
-
-                     <div className="mb-4">
-                        <span className="text-primary font-semibold">
-                           {testimonials[currentIndex].company}
-                        </span>
-                     </div>
-
-                     <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4">
-                        {testimonials[currentIndex].title}
-                     </h3>
-
-                     <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                        {testimonials[currentIndex].quote}
-                     </p>
-
-                     <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-foreground font-bold text-xl">
-                           {testimonials[currentIndex].name.charAt(0)}
-                        </div>
-                        <div>
-                           <p className="font-semibold text-foreground">
-                              {testimonials[currentIndex].name}
-                           </p>
-                           <p className="text-sm text-muted-foreground">
-                              {testimonials[currentIndex].role}
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-
-                  {/* Navigation */}
-                  <div className="flex items-center justify-center gap-4 mt-8">
-                     <button
-                        onClick={prevSlide}
-                        className="p-2 rounded-full border border-border hover:border-primary transition-colors"
-                     >
-                        <ChevronLeft className="w-5 h-5 text-muted-foreground" />
-                     </button>
-                     <div className="flex gap-2">
-                        {testimonials.map((_, i) => (
-                           <button
-                              key={i}
-                              onClick={() => setCurrentIndex(i)}
-                              className={`w-2.5 h-2.5 rounded-full transition-all ${
-                                 i === currentIndex
-                                    ? 'bg-primary w-8'
-                                    : 'bg-muted-foreground/30'
-                              }`}
-                           />
-                        ))}
-                     </div>
-                     <button
-                        onClick={nextSlide}
-                        className="p-2 rounded-full border border-border hover:border-primary transition-colors"
-                     >
-                        <ChevronRight className="w-5 h-5 text-muted-foreground" />
-                     </button>
-                  </div>
-               </div>
+         <div className="relative max-w-7xl mx-auto px-4">
+            {/* Header */}
+            <div className="mb-12 text-white">
+               <h2 className="text-sm tracking-widest font-semibold uppercase flex items-center gap-3">
+                  Testimonials
+                  <span className="flex gap-1">
+                     <Grip className="w-8 h-8 opacity-50" />
+                  </span>
+               </h2>
             </div>
+
+            {/* Slider */}
+            <HorizontalSlider gap={24}>
+               {testimonials.map((t) => (
+                  <TestimonialsCard key={t.id} data={t} />
+               ))}
+            </HorizontalSlider>
          </div>
       </section>
    );
