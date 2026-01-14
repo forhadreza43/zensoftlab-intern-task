@@ -12,7 +12,7 @@ interface ClientSuccessCardProps {
 const ClientSuccessCard: React.FC<ClientSuccessCardProps> = ({
    name,
    title,
-   company="",
+   company = '',
    logoUrl,
    youtubeId,
    videoLeftOnDesktop = false,
@@ -45,7 +45,9 @@ const ClientSuccessCard: React.FC<ClientSuccessCardProps> = ({
             <div
                className={
                   `flex flex-col justify-center p-6 sm:p-10 ` +
-                  (videoLeftOnDesktop ? 'lg:order-2 items-start' : 'lg:order-1 items-start lg:items-end')
+                  (videoLeftOnDesktop
+                     ? 'lg:order-2 items-start'
+                     : 'lg:order-1 items-start lg:items-end')
                }
             >
                <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-2">
@@ -54,11 +56,11 @@ const ClientSuccessCard: React.FC<ClientSuccessCardProps> = ({
                <p className="text-gray-600 font-medium">{title}</p>
                <p className="text-gray-500 mb-6">{company}</p>
 
-               <div className="w-32 h-20 flex items-center">
+               <div className="w-32 h-24 flex items-center">
                   <img
                      src={logoUrl}
                      alt={`${company} logo`}
-                     className="object-contain opacity-80"
+                     className="object-contain h-full opacity-80"
                   />
                </div>
             </div>
