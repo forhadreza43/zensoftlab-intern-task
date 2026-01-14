@@ -1,3 +1,9 @@
+/* Reserve space for the scrollbar to prevent layout shift/gap when overlays open */
+/* Keep scrollbar space reserved to prevent right-side gap when overlays open */
+html,
+body {
+   scrollbar-gutter: stable both-edges;
+}
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -187,6 +193,7 @@ body {
    --shadow-xl: var(--shadow-xl);
    --shadow-2xl: var(--shadow-2xl);
 
+   --color-footer-bg: hsl(220 70% 12%);
    --color-rocket-body: hsl(210 100% 60%);
    --color-rocket-flame: hsl(30 100% 50%);
    --color-rocket-flameInner: hsl(45 100% 60%);

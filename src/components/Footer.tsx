@@ -144,7 +144,7 @@ const Footer = () => {
                      <FooterAccordion key={index} data={social} />
                   ))}
                </div>
-               <div className="hidden md:grid grid-cols-4 gap-5 py-10">
+               <div className="hidden md:grid grid-cols-4 gap-5 ">
                   {quickLinks.map((section, index) => (
                      <div key={index}>
                         <h4 className="text-primary-foreground text-xl font-semibold uppercase mb-4">

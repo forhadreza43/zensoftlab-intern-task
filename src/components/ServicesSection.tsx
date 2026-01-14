@@ -157,22 +157,24 @@ const ServicesSection = () => {
                            key={service.title}
                            className="bg-secondary/20 rounded hover:bg-secondary/40 transition-all duration-300 hover:-translate-y-1"
                         >
-                           <div className="p-4 bg-primary-foreground border rounded border-secondary/20 h-full w-full transform -translate-x-1 -translate-y-1 mr-1 mb-1">
+                           <div className="p-4 flex flex-col justify-between bg-primary-foreground border rounded border-secondary/20 h-full w-full transform -translate-x-1 -translate-y-1 mr-1 mb-1">
                               <div className="w-16 h-16 rounded-xl text-primary flex items-center justify-center mb-4">
                                  <service.icon className="w-10 h-10 text-primary" />
                               </div>
                               <h3 className="text-xl font-semibold text-primary mb-3">
                                  {service.title}
                               </h3>
-                              <p className="text-sm mb-4 text-primary leading-relaxed">
-                                 {service.description}
-                              </p>
-                              <a
-                                 href="#"
-                                 className="text-secondary font-medium hover:text-primary/80 transition-colors inline-flex items-center gap-1"
-                              >
-                                 Read More
-                              </a>
+                              <div>
+                                 <p className="text-sm mb-4 text-primary leading-relaxed">
+                                    {service.description}
+                                 </p>
+                                 <a
+                                    href="#"
+                                    className="text-secondary font-medium hover:text-primary/80 transition-colors inline-flex items-center gap-1"
+                                 >
+                                    Read More
+                                 </a>
+                              </div>
                            </div>
                         </div>
                      ))}

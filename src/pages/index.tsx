@@ -3,9 +3,9 @@ import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
 import ServicesSection from '@/components/ServicesSection';
 import PartnersSection from '@/components/PartnersSection';
-// import TestimonialsSection from '@/components/TestimonialsSection';
-// import ProjectsSection from '@/components/ProjectsSection';
-// import GlobalReachSection from '@/components/GlobalReachSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import ProjectsSection from '@/components/FeaturedProducts';
+import GlobalReachSection from '@/components/GlobalReachSection';
 // import ContactSection from '@/components/ContactSection';
 // import AboutSection from '@/components/AboutSection';
 // import FAQSection from '@/components/FAQSection';
@@ -23,12 +23,12 @@ const Index = () => {
             {/* <Text/> */}
             <ServicesSection />
             <PartnersSection />
-            {/* <TestimonialsSection />
+            <TestimonialsSection />
             <ProjectsSection />
             <GlobalReachSection />
-            <ContactSection />
-            <AboutSection />
-            <FAQSection /> */}
+            {/* <ContactSection /> */}
+            {/* <AboutSection /> */}
+            {/* <FAQSection /> */}
          </main>
          <Footer />
          <BookMeetingButton />

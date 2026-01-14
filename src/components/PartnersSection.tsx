@@ -3,7 +3,7 @@ import { Award, BadgeCheck, Users } from 'lucide-react';
 const PartnersSection = () => {
    return (
       <section className="py-16 relative overflow-hidden">
-         <div className="relative z-10 container mx-auto px-4">
+         <div className="relative z-10 md:w-[95%] lg:w-[90%] max-w-360 mx-auto px-4">
             {/* GRID CONTROLLER */}
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 items-stretch">
                {/* Card 1 — 60% on lg, full on md/sm */}
@@ -20,7 +20,7 @@ const PartnersSection = () => {
                      </div>
                      <div>
                         <p className="text-sm text-muted-foreground">
-                           nopCommerce
+                           zensoftCommerce
                         </p>
                         <p className="text-lg font-semibold text-foreground">
                            Gold Solution Partner
@@ -39,7 +39,9 @@ const PartnersSection = () => {
                         <BadgeCheck className="w-10 h-10 opacity-80" />
                      </span>
                      <p className="text-4xl font-bold text-primary/90">100+</p>
-                     <p className="">nopCommerce & Odoo Certified Developers</p>
+                     <p className="">
+                        zensoftCommerce & Odoo Certified Developers
+                     </p>
                   </div>
                </div>
 
@@ -53,7 +55,7 @@ const PartnersSection = () => {
                         <Users className="w-10 h-10 text-primary opacity-80" />
                      </span>
                      <p className="text-4xl font-bold text-primary/90">04</p>
-                     <p className="">nopCommerce & Odoo MVP</p>
+                     <p className="">zensoftCommerce & Odoo MVP</p>
                   </div>
                </div>
             </div>
