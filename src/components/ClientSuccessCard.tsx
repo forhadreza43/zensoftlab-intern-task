@@ -26,7 +26,7 @@ const ClientSuccessCard: React.FC<ClientSuccessCardProps> = ({
             {/* Video */}
             <div
                className={
-                  `w-full h-65 sm:h-80 lg:h-full lg:min-h-96 ` +
+                  `w-full h-55 sm:h-80 lg:h-full lg:min-h-96 ` +
                   (videoLeftOnDesktop ? 'lg:order-1' : 'lg:order-2')
                }
             >
