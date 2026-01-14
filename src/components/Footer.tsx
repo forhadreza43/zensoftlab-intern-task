@@ -69,7 +69,7 @@ const socialLinks = [
 
 const Footer = () => {
    return (
-      <footer className="relative overflow-hidden border-t bg-primary">
+      <footer className="relative overflow-hidden border-t bg-primary mt-20">
          <div className="relative mx-auto">
             <div className="px-4">
                <div className="flex items-center gap-1 justify-center text-primary-foreground py-2 border-b lg:border-0">
