@@ -51,16 +51,16 @@ const ProjectsSection = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-               {projects.map((project, index) => (
+               {projects.map((project) => (
                   <div
                      key={project.name}
                      className="group relative overflow-hidden rounded-xl bg-muted/30 aspect-video cursor-pointer"
                   >
                      {/* Placeholder gradient for project image */}
-                     <div className="absolute inset-0 bg-gradient-to-br from-navy-mid to-navy-dark" />
+                     <div className="absolute inset-0 bg-linear-to-br from-navy-mid to-navy-dark" />
 
                      {/* Overlay */}
-                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                     <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                      {/* Content */}
                      <div className="absolute inset-0 p-6 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
