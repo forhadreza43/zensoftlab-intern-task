@@ -8,6 +8,7 @@ import {
    Globe,
    ArrowRight,
    ArrowLeft,
+   Grip,
 } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -134,7 +135,7 @@ const ServicesSection = () => {
                   </button>
                </div>
             </div>
-
+            <Grip className="w-10 h-10 hidden md:block -translate-x-3 absolute bottom-0 right-0 translate-y-10 opacity-20" />
             <div
                ref={scrollRef}
                className={`overflow-x-auto scrollbar-hidden px-2 py-2

@@ -7,7 +7,7 @@ import {
    SelectTrigger,
    SelectValue,
 } from '@/components/ui/select';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Grip } from 'lucide-react';
 import { useRef, useState } from 'react';
 
 export default function FeaturedProducts() {
@@ -62,8 +62,11 @@ export default function FeaturedProducts() {
             <Tabs defaultValue="new">
                {/* Header */}
                <div className="flex items-center flex-col md:flex-row justify-between mb-6 gap-4 w-full">
-                  <h2 className="text-lg font-semibold tracking-wide text-primary">
+                  <h2 className="text-lg font-semibold tracking-wide text-primary leading-tight">
                      FEATURED ZENSOFTCOMMERCE PRODUCTS
+                     <span className="inline-flex align-middle opacity-30 ml-2">
+                        <Grip className="w-5 h-5" />
+                     </span>
                   </h2>
 
                   {/* Desktop Tabs */}
@@ -132,7 +135,6 @@ export default function FeaturedProducts() {
                            )}
                         </>
                      )}
-                     
 
                      <ProductSlider ref={sliderRef} />
                   </TabsContent>
@@ -173,7 +175,10 @@ ProductSlider.displayName = 'ProductSlider';
 
 function ProductCard() {
    return (
-      <div className="min-w-[420px] md:min-w-[500px] lg:min-w-[580px] bg-white rounded-lg shadow-md shadow-black/20 border border-gray-200 hover:shadow-xl hover:shadow-black/30 hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 flex overflow-hidden">
+      <div
+         style={{ boxShadow: '2px 2px 8px rgba(0, 0, 0, 0.1)' }}
+         className="min-w-105 md:min-w-125 lg:min-w-145 bg-white rounded-lg shadow-md shadow-black/20 border border-gray-200 hover:shadow-xl hover:shadow-black/30 hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 flex overflow-hidden"
+      >
          {/* unchanged content */}
          <div className="relative w-[45%] bg-gray-100 flex items-center justify-center">
             <span className="absolute top-3 right-3 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">
