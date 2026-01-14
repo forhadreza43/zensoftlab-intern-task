@@ -5,7 +5,7 @@ import ServicesSection from '@/components/ServicesSection';
 import PartnersSection from '@/components/PartnersSection';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import TestimonialsSection from '@/components/TestimonialsSection';
-// import GlobalReachSection from '@/components/GlobalReachSection';
+import GlobalReachSection from '@/components/GlobalReachSection';
 // import ContactSection from '@/components/ContactSection';
 // import AboutSection from '@/components/AboutSection';
 // import FAQSection from '@/components/FAQSection';
@@ -27,7 +27,7 @@ const Index = () => {
             <FeaturedProducts />
             <ClientSuccessSection />
             <TestimonialsSection />
-            {/* <GlobalReachSection /> */}
+            <GlobalReachSection />
             {/* <ContactSection /> */}
             {/* <AboutSection /> */}
             {/* <FAQSection /> */}

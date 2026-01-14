@@ -23,9 +23,9 @@ export default function FeaturedProducts() {
          <div className="md:w-[95%] lg:w-[90%] max-w-360 mx-auto px-4">
             <Tabs defaultValue="new">
                <div className="flex flex-col md:flex-row justify-between gap-4 mb-6">
-                  <h2 className="text-lg font-semibold text-primary">
+                  <h2 className="text-lg font-semibold text-primary text-center">
                      FEATURED ZENSOFTCOMMERCE PRODUCTS
-                     <span className="inline-flex ml-2 opacity-30">
+                     <span className="hidden md:inline-flex ml-2 opacity-30">
                         <Grip className="w-5 h-5" />
                      </span>
                   </h2>
@@ -42,9 +42,9 @@ export default function FeaturedProducts() {
                      ))}
                   </TabsList>
 
-                  <div className="md:hidden">
+                  <div className="md:hidden px-2">
                      <Select defaultValue="new">
-                        <SelectTrigger className="bg-white border">
+                        <SelectTrigger className="bg-white border border-gray-400 w-full px-4">
                            <SelectValue />
                         </SelectTrigger>
                         <SelectContent>

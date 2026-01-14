@@ -53,7 +53,7 @@ const TestimonialsSection: React.FC = () => {
          {/* Blue background shape */}
          <div className="absolute left-0 top-0 h-full w-[80%] md:w-[60%] lg:w-[45%] bg-sky-500 rounded-br-[80px]" />
 
-         <div className="relative max-w-7xl mx-auto px-4">
+         <div className="relative md:w-[95%] lg:w-[90%] max-w-360 mx-auto px-4">
             {/* Header */}
             <div className="mb-12 text-white">
                <h2 className="text-sm tracking-widest font-semibold uppercase flex items-center gap-3">
