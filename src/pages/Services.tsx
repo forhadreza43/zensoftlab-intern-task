@@ -73,7 +73,6 @@ const services = [
 ];
 
 export default function Services() {
-   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
    const containerRef = useRef<HTMLDivElement>(null);
 
    return (
@@ -106,19 +105,13 @@ export default function Services() {
                   ref={containerRef}
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8"
                >
-                  {services.map((service, index) => {
+                  {services.map((service) => {
                      const IconComponent = service.icon;
                      return (
                         <div
                            key={service.title}
                            className="group relative h-full"
-                           onMouseEnter={() => setHoveredIndex(index)}
-                           onMouseLeave={() => setHoveredIndex(null)}
                         >
-                           {/* Background accent */}
-                           {/* <div className="absolute inset-0 bg-gray-200" /> */}
-
-                           {/* Card */}
                            <div
                               style={{
                                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.1)',
