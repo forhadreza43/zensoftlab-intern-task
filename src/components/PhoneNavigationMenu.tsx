@@ -8,8 +8,8 @@ import {
 
 export default function PhoneNavigationMenu() {
    return (
-      <div className="bg-primary-foreground md:hidden">
-         <div className="px-10 py-2 relative">
+      <div className="bg-primary-foreground md:hidden  fixed bottom-0 left-0 w-full z-30">
+         <div className="px-6 py-2 relative">
             <ul className="flex items-center justify-between text-xs text-primary">
                <li className="flex flex-col items-center">
                   <span>

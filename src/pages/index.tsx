@@ -31,8 +31,8 @@ const Index = () => {
             {/* <ContactSection /> */}
             {/* <AboutSection /> */}
             {/* <FAQSection /> */}
-         </main>
          <Footer />
+         </main>
          <BookMeetingButton />
       </div>
    );
