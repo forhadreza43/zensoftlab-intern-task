@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router';
 import rootLayout from '@/layout/rootLayout';
 import NotFound from '@/pages/NotFound';
 import Index from '@/pages';
+import Services from '@/pages/Services';
 
 const router = createBrowserRouter([
    {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
          {
             index: true,
             Component: Index,
+         },
+         {
+            path: 'services',
+            Component: Services,
          },
       ],
    },
