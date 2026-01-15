@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
 
             {/* Logo Section */}
-            <div className="flex flex-col items-center  opacity-100 pb-6 md:pb-12 pt-8">
+            <div className="flex flex-col items-center  opacity-100 pb-8 md:pb-12 pt-8">
                <a href="/" className="flex items-center gap-2 opacity-100">
                   <span className="text-xl font-bold">
                      <span className="text-primary-foreground">Zen</span>

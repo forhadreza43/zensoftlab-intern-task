@@ -14,6 +14,7 @@ import { FooterAccordion } from './FooterAccordion';
 import { Link } from 'react-router';
 import { AmericanExpressIcon, MastercardIcon, VisaIcon } from 'react-svg-credit-card-payment-icons';
 import BottomFooter from './BottomFooter';
+import PhoneNavigationMenu from './PhoneNavigationMenu';
 
 const quickLinks = [
    {
@@ -217,6 +218,7 @@ const Footer = () => {
             <div>
                <BottomFooter/>
             </div>
+            <PhoneNavigationMenu />
          </div>
       </footer>
    );
