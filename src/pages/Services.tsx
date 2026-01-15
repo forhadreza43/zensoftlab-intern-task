@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import {
    Settings,
    Smartphone,
@@ -6,7 +6,6 @@ import {
    Server,
    Zap,
    ShoppingBag,
-   ArrowRight,
    Mail,
    MessageCircle,
    Ticket,
@@ -200,13 +199,8 @@ export default function Services() {
 
                   {/* RIGHT: Illustration */}
                   <div className="relative hidden lg:flex justify-center">
-                     {/* Placeholder for illustration */}
                      <div className="relative w-full max-w-md">
                         <img src="service-web-development-01.svg" alt="" />
-
-                        {/* Decorative accents */}
-                        {/* <div className="absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-cyan-400/20 blur-2xl" />
-                        <div className="absolute -top-8 -left-8 h-24 w-24 rounded-full bg-indigo-500/20 blur-2xl" /> */}
                      </div>
                   </div>
                </div>
