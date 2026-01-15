@@ -9,21 +9,21 @@ import {
 export default function PhoneNavigationMenu() {
    return (
       <div className="bg-primary-foreground md:hidden  fixed bottom-0 left-0 w-full z-30">
-         <div className="px-6 py-2 relative">
-            <ul className="flex items-center justify-between text-xs text-primary">
-               <li className="flex flex-col items-center">
+         <div className="py-2 pb-6">
+            <ul className="grid grid-cols-5 items-center justify-items-center text-xs text-primary place-content-center">
+               <li className="flex flex-col items-center place-content-center">
                   <span>
                      <UserRound />
                   </span>
                   <span>Log in</span>{' '}
                </li>
-               <li className="flex flex-col items-center">
+               <li className="flex flex-col items-center place-content-center">
                   <span>
                      <Tags fill="bg-primary" className="scale-x-[-1]" />
                   </span>
                   <span>My tickets</span>
                </li>
-               <li className="relative">
+               <li className="relative place-content-center">
                   <div className="absolute z-30 top-0 left-1/2 -translate-x-1/2 -translate-y-13">
                      <span
                         style={{
@@ -35,13 +35,13 @@ export default function PhoneNavigationMenu() {
                      </span>
                   </div>
                </li>
-               <li className="flex flex-col items-center">
+               <li className="flex flex-col items-center place-content-center">
                   <span>
                      <Search />
                   </span>
                   <span>Search</span>
                </li>
-               <li className="flex flex-col items-center">
+               <li className="flex flex-col items-center place-content-center">
                   <span>
                      <ShoppingCart />
                   </span>
